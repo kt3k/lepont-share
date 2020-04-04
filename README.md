@@ -80,4 +80,5 @@ Shares the given contents and sends the data to other Apps.
 
 MIT
 
+[lepont]: https://github.com/kt3k/lepont
 [react-native]: https://reactnative.dev/
