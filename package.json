@@ -1,0 +1,43 @@
+{
+  "name": "@lepont/share",
+  "version": "0.1.0",
+  "description": "Share messages and files from browser, a lepont plugin",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf types dist coverage",
+    "fmt": "prettier --write bridge src *.json",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm run clean && npm run dist",
+    "dist": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kt3k/lepont-share.git"
+  },
+  "keywords": [
+    "lepont",
+    "share"
+  ],
+  "author": "Yoshiya Hinosawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kt3k/lepont-share/issues"
+  },
+  "homepage": "https://github.com/kt3k/lepont-share#readme",
+  "peerDependencies": {
+    "lepont": ">=0.10.1"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "jest": "^25.2.7",
+    "lepont": "^0.10.1",
+    "prettier": "^2.0.2",
+    "react": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  }
+}
