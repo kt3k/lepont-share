@@ -1,4 +1,4 @@
-# @lepont/share v0.1.1
+# @lepont/share v0.1.2
 
 > Share messages and files from browser, a [lepont][] plugin
 
