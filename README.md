@@ -1,6 +1,6 @@
 # @lepont/share v0.1.2
 
-![ci](https://github.com/kt3k/lepont-share/workflows/ci/badge.svg)
+![ci](https://github.com/kt3k/lepont-share/workflows/ci/badge.svg?)
 [![codecov](https://codecov.io/gh/kt3k/lepont-share/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/lepont-share)
 
 > Share messages and files from browser, a [lepont][] plugin
