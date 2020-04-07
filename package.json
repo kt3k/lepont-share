@@ -8,6 +8,7 @@
     "types",
     "bridge"
   ],
+  "types": "./types",
   "scripts": {
     "clean": "rimraf types dist coverage",
     "fmt": "prettier --write bridge src *.json",
