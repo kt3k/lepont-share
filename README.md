@@ -64,7 +64,7 @@ type Options = {
   urls?: string[]
 
   /** array of filename for base64 urls array (only works for Android */
-  filenames: string[]
+  filenames?: string[]
 
   /** File mime type ex. "image/png" */
   type?: string
