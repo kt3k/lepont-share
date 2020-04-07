@@ -13,6 +13,13 @@ After initializing react-native:
 npm install lepont @lepont/share react-native-share
 ```
 
+And then:
+
+```
+cd ios
+pod install
+```
+
 # Usage
 
 React Native side:
