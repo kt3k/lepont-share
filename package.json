@@ -3,12 +3,12 @@
   "version": "0.1.4",
   "description": "Share messages and files from browser, a lepont plugin",
   "main": "dist/index.js",
+  "types": "./types/index.d.ts",
   "files": [
     "dist",
     "types",
     "bridge"
   ],
-  "types": "./types",
   "scripts": {
     "clean": "rimraf types dist coverage",
     "fmt": "prettier --write bridge src *.json",
