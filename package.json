@@ -1,6 +1,6 @@
 {
   "name": "@lepont/share",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Share messages and files from browser, a lepont plugin",
   "main": "dist/index.js",
   "types": "./types/index.d.ts",
