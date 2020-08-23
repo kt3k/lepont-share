@@ -10,14 +10,15 @@
 After initializing react-native:
 
 ```
-npm install lepont @lepont/share react-native-share
+npm i --save lepont @lepont/share react-native-share
+# or
+yarn add lepont @lepont/share react-native-share
 ```
 
 And then:
 
 ```
-cd ios
-pod install
+npx pod-install
 ```
 
 # Usage
@@ -25,21 +26,20 @@ pod install
 React Native side:
 
 ```ts
-import { useRegistry } from 'lepont'
-import { useShare } from '@lepont/share/bridge'
+import { useBridge } from 'lepont'
+import { ShareBridge } from '@lepont/share/bridge'
 import Share from 'react-native-share'
 import { WebView } from 'react-native-webview'
 
 const App = () => {
-  const registry = useRegistry()
-  useShare(registry, Share)
+  const [ref, onMessage] = useRegistry(ShareBridge(Share))
 
   return (
     <WebView
       source={{ uri: 'Web.bundle/index.html' }}
-      javaScriptEnabled={true}
-      ref={registry.ref}
-      onMessage={registry.onMessage}
+      javaScriptEnabled
+      ref={ref}
+      onMessage={onMessage}
     />
   )
 }
