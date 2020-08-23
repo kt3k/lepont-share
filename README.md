@@ -1,4 +1,4 @@
-# @lepont/share v0.2.0
+# @lepont/share v0.2.1
 
 ![ci](https://github.com/kt3k/lepont-share/workflows/ci/badge.svg?)
 [![codecov](https://codecov.io/gh/kt3k/lepont-share/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/lepont-share)
