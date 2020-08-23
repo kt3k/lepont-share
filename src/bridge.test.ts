@@ -1,23 +1,26 @@
 import * as React from 'react'
-import { useShare } from './bridge'
-import { useRegistry } from 'lepont'
+import { ShareBridge } from './bridge'
+import { useBridge } from 'lepont'
 import { renderHook } from '@testing-library/react-hooks'
 import { MSG_TYPE_SHARE } from './shared'
 
-const useApp = () => {
-  const registry = useRegistry()
-  useShare(registry, {
-    async open() {},
-  })
-  return registry
-}
+const useApp = () =>
+  useBridge(
+    ShareBridge({
+      async open() {},
+    })
+  )
 
-describe('useShare', () => {
+describe('ShareBridge', () => {
   it('registers share bridge', async () => {
-    const { result } = renderHook(() => useApp())
+    const {
+      result: {
+        current: [ref, onMessage],
+      },
+    } = renderHook(() => useApp())
     const webView = { injectJavaScript: jest.fn() }
-    result.current.ref(webView)
-    await result.current.onMessage({
+    ref(webView)
+    await onMessage({
       nativeEvent: {
         data: JSON.stringify({
           id: 1,

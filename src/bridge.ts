@@ -5,12 +5,10 @@ type ShareModule = {
   open: (opts: any) => Promise<void>
 }
 
-export function useShare(registry: Registry, s: ShareModule) {
-  useBridge(
-    registry,
+export const ShareBridge = (s: ShareModule) => (registry: Registry): void =>
+  registry.register(
     MSG_TYPE_SHARE,
     async (p: Options, _: Bridge): Promise<void> => {
       await s.open(p)
     }
   )
-}
