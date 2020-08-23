@@ -25,7 +25,7 @@ npx pod-install
 
 React Native side:
 
-```ts
+```tsx
 import { useBridge } from 'lepont'
 import { ShareBridge } from '@lepont/share/bridge'
 import Share from 'react-native-share'
