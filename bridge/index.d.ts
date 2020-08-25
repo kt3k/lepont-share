@@ -1,2 +1,1 @@
-import { useShare } from '../types/bridge'
-export { useShare }
+export { ShareBridge } from '../types/bridge'
